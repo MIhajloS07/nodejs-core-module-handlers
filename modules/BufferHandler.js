@@ -1,0 +1,1 @@
+const { Buffer } = require('buffer'); // Import the Buffer class from the buffer module
