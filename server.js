@@ -1,10 +1,12 @@
 import FileHandler from './modules/FileHandler.js'; // Import the FileHandler class from the modules directory
 import BufferHandler from './modules/BufferHandler.js'; // Import the BufferHandler class from the modules directory
 import CryptoHandler from './modules/CryptoHandler.js'; // Import the CryptoHandler class from the modules directory
+import OsHandler from './modules/OsHandler.js'; // Import the OsHandler class from the modules directory
 
 const fileHandler = new FileHandler('example.txt'); // Create a new instance of the FileHandler class
 const bufferHandler = new BufferHandler(); // Create a new instance of the BufferHandler class
 const cryptoHandler = new CryptoHandler(); // Create a new instance of the CryptoHandler class
+const osHandler = new OsHandler(); // Create a new instance of the OsHandler class
 
 // fileHandler.writeFile('Backend', (err, message) => {
 //     if (err) {
@@ -55,3 +57,10 @@ cryptoHandler.generateRandomBytes(16); // Generate a Buffer containing 16 random
 cryptoHandler.generateRandomInt(1, 100);
 const secretKey = cryptoHandler.createSecretKey(32); // Create a SecretKey object from a Buffer of 32 random bytes
 cryptoHandler.printSecretKey(secretKey); // Print the key to the console
+
+console.log('------------------------------');
+
+osHandler.printSystemInfo(); // Print the operating system information to the console
+osHandler.isLinuxPlatform() ? console.log('Running on Linux platform.') : console.log('Not running on Linux platform.'); // Check if the platform is Linux and log the result to the console
+osHandler.isWindowsPlatform() ? console.log('Running on Windows platform.') : console.log('Not running on Windows platform.');
+osHandler.isMacPlatform() ? console.log('Running on macOS platform.') : console.log('Not running on macOS platform.');
