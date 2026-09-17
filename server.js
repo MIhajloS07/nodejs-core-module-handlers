@@ -2,11 +2,13 @@ import FileHandler from './modules/FileHandler.js'; // Import the FileHandler cl
 import BufferHandler from './modules/BufferHandler.js'; // Import the BufferHandler class from the modules directory
 import CryptoHandler from './modules/CryptoHandler.js'; // Import the CryptoHandler class from the modules directory
 import OsHandler from './modules/OsHandler.js'; // Import the OsHandler class from the modules directory
+import PathHandler from './modules/PathHandler.js'; // Import the PathHandler class from the modules directory    
 
 const fileHandler = new FileHandler('example.txt'); // Create a new instance of the FileHandler class
 const bufferHandler = new BufferHandler(); // Create a new instance of the BufferHandler class
 const cryptoHandler = new CryptoHandler(); // Create a new instance of the CryptoHandler class
 const osHandler = new OsHandler(); // Create a new instance of the OsHandler class
+const pathHandler = new PathHandler('example.cpp'); // Create a new instance of the PathHandler class
 
 // fileHandler.writeFile('Backend', (err, message) => {
 //     if (err) {
@@ -64,3 +66,12 @@ osHandler.printSystemInfo(); // Print the operating system information to the co
 osHandler.isLinuxPlatform() ? console.log('Running on Linux platform.') : console.log('Not running on Linux platform.'); // Check if the platform is Linux and log the result to the console
 osHandler.isWindowsPlatform() ? console.log('Running on Windows platform.') : console.log('Not running on Windows platform.');
 osHandler.isMacPlatform() ? console.log('Running on macOS platform.') : console.log('Not running on macOS platform.');
+
+console.log('------------------------------');
+
+console.log(pathHandler.getExtension()); // Get an extension from filename
+console.log(pathHandler.createAbsolutePath("assets", "src", "text-files")); // create an absolute path from three arguments
+console.log(pathHandler.createRelativePath("assets", "src", "text-files")); // create a relative path from three arguments
+console.log(pathHandler.parseFile()); // Parse file path to object to get informations (root, dir, base, ext, name)
+console.log(pathHandler.formatFile()); // Format file from object to file path to get path
+
