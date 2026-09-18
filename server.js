@@ -3,12 +3,14 @@ import BufferHandler from './modules/BufferHandler.js'; // Import the BufferHand
 import CryptoHandler from './modules/CryptoHandler.js'; // Import the CryptoHandler class from the modules directory
 import OsHandler from './modules/OsHandler.js'; // Import the OsHandler class from the modules directory
 import PathHandler from './modules/PathHandler.js'; // Import the PathHandler class from the modules directory    
+import ProcessHandler from './modules/ProcessHandler.js'; // Import the ProcessHandler class from the modules directory
 
 const fileHandler = new FileHandler('example.txt'); // Create a new instance of the FileHandler class
 const bufferHandler = new BufferHandler(); // Create a new instance of the BufferHandler class
 const cryptoHandler = new CryptoHandler(); // Create a new instance of the CryptoHandler class
 const osHandler = new OsHandler(); // Create a new instance of the OsHandler class
 const pathHandler = new PathHandler('example.cpp'); // Create a new instance of the PathHandler class
+const processHandler = new ProcessHandler(); // Create a new instance of the processHandler class
 
 // fileHandler.writeFile('Backend', (err, message) => {
 //     if (err) {
@@ -75,3 +77,25 @@ console.log(pathHandler.createRelativePath("assets", "src", "text-files")); // c
 console.log(pathHandler.parseFile()); // Parse file path to object to get informations (root, dir, base, ext, name)
 console.log(pathHandler.formatFile()); // Format file from object to file path to get path
 
+console.log('------------------------------');
+
+console.log(processHandler.getCurrentEnvironment() + '\n');
+console.log(processHandler.getEnvironmentVariables() + '\n');
+console.log(processHandler.getPWD() + '\n');
+console.log(processHandler.getPathOfShellProgram() + '\n');
+console.log(processHandler.getSystemPathVariable() + '\n');
+console.log(processHandler.getUsername() + '\n');
+console.log(processHandler.readCommandLineArgs() + '\n');
+console.log(processHandler.getCurrentWorkingDirectory() + '\n');
+console.log(processHandler.getProcessPID() + '\n');
+console.log(processHandler.getProcessUpTime() + '\n');
+console.log(processHandler.getProcessVersion() + '\n');
+console.log(processHandler.getTypeScriptFeatures() + '\n');
+console.log(processHandler.getDebugPort() + '\n');
+
+// process events => Node.js core feature that let app respond to key moments in its lifecycle
+processHandler.handleBeforeExitEvent();
+processHandler.handleExitEvent(); 
+processHandler.handleUncaughtExceptionEvent();
+processHandler.handleWarningEvent();
+processHandler.emitCustomWarning('This is a custom warning message', 'CustomWarning');
