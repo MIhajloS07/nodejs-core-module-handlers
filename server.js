@@ -4,6 +4,7 @@ import CryptoHandler from './modules/CryptoHandler.js'; // Import the CryptoHand
 import OsHandler from './modules/OsHandler.js'; // Import the OsHandler class from the modules directory
 import PathHandler from './modules/PathHandler.js'; // Import the PathHandler class from the modules directory    
 import ProcessHandler from './modules/ProcessHandler.js'; // Import the ProcessHandler class from the modules directory
+import StreamHandler from './modules/StreamHandler.js'; // Import the StreamHandler class from the modules directory
 
 const fileHandler = new FileHandler('example.txt'); // Create a new instance of the FileHandler class
 const bufferHandler = new BufferHandler(); // Create a new instance of the BufferHandler class
@@ -11,6 +12,7 @@ const cryptoHandler = new CryptoHandler(); // Create a new instance of the Crypt
 const osHandler = new OsHandler(); // Create a new instance of the OsHandler class
 const pathHandler = new PathHandler('example.cpp'); // Create a new instance of the PathHandler class
 const processHandler = new ProcessHandler(); // Create a new instance of the processHandler class
+const streamHandler = new StreamHandler('example.txt'); // Create a new instance of the StreamHandler class
 
 // fileHandler.writeFile('Backend', (err, message) => {
 //     if (err) {
@@ -99,3 +101,7 @@ processHandler.handleExitEvent();
 processHandler.handleUncaughtExceptionEvent();
 processHandler.handleWarningEvent();
 processHandler.emitCustomWarning('This is a custom warning message', 'CustomWarning');
+
+console.log('------------------------------');
+
+streamHandler.readInputFileStream();
