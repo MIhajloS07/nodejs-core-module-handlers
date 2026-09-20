@@ -12,7 +12,7 @@ const cryptoHandler = new CryptoHandler(); // Create a new instance of the Crypt
 const osHandler = new OsHandler(); // Create a new instance of the OsHandler class
 const pathHandler = new PathHandler('example.cpp'); // Create a new instance of the PathHandler class
 const processHandler = new ProcessHandler(); // Create a new instance of the processHandler class
-const streamHandler = new StreamHandler('example.txt'); // Create a new instance of the StreamHandler class
+const streamHandler = new StreamHandler('example.txt', 'textualfile.txt'); // Create a new instance of the StreamHandler class
 
 // fileHandler.writeFile('Backend', (err, message) => {
 //     if (err) {
@@ -104,4 +104,9 @@ processHandler.emitCustomWarning('This is a custom warning message', 'CustomWarn
 
 console.log('------------------------------');
 
+streamHandler.createReadStream();
 streamHandler.readInputFileStream();
+streamHandler.writeInputFileStream();
+// This method is called in writeInputFileStream() function
+//streamHandler.handleErrorEvent(arg);
+//streamHandler.handleFinishEvent(arg);
