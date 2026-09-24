@@ -49,7 +49,6 @@ nodejs-core-module-handlers/
 │
 ├── index.js
 ├── package.json
-├── package-lock.json
 ├── LICENSE
 └── README.md
 ```
