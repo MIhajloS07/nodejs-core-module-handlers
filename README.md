@@ -1,12 +1,12 @@
-# Node.js Core Module Handlers - toolkit
+# Node.js Core Module Handlers - Toolkit
 
 A hands-on exploration of **Node.js built-in (core) modules** through custom handler classes and practical examples.
 
 The goal of this project is to understand how Node.js core modules work by using them directly and encapsulating their functionality into reusable classes.
 
-## 📚 Modules Covered
+The project is structured as a reusable **npm package**, with `index.js` serving as the public entry point for importing the available handlers.
 
-The project currently includes handlers for:
+## 📚 Modules Covered
 
 | Handler          | Node.js Core Module  | Purpose                                 |
 | ---------------- | -------------------- | --------------------------------------- |
@@ -44,10 +44,13 @@ nodejs-core-module-handlers/
 │   ├── ProcessHandler.js
 │   └── StreamHandler.js
 │
-├── assets/
+├── test/
+│   └── server.js
+│
 ├── index.js
 ├── package.json
 ├── package-lock.json
+├── LICENSE
 └── README.md
 ```
 
@@ -60,18 +63,35 @@ nodejs-core-module-handlers/
 * npm
 * Git & GitHub
 
+## 📦 Package Structure
+
+The project uses `index.js` as its public API entry point, allowing consumers to import the available handlers from a single module.
+
+Example:
+
+```js
+import {
+    FileHandler,
+    BufferHandler,
+    CryptoHandler,
+    StreamHandler
+} from "./index.js";
+```
+
+The package was also tested locally by creating an npm tarball with `npm pack` and installing it into a separate Node.js project.
+
 ## 🚀 Running the Project
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/MIhajloS07/nodejs-core-module-handlers.git
+git clone https://github.com/MIhajloS07/nodejs-modules-working.git
 ```
 
 Navigate into the project:
 
 ```bash
-cd nodejs-core-module-handlers
+cd nodejs-modules-working
 ```
 
 Install dependencies:
@@ -80,10 +100,10 @@ Install dependencies:
 npm install
 ```
 
-Run the project:
+Run the demonstration:
 
 ```bash
-node index.js
+npm start
 ```
 
 ## 📖 Learning Approach
