@@ -1,10 +1,12 @@
-import FileHandler from './modules/FileHandler.js'; // Import the FileHandler class from the modules directory
-import BufferHandler from './modules/BufferHandler.js'; // Import the BufferHandler class from the modules directory
-import CryptoHandler from './modules/CryptoHandler.js'; // Import the CryptoHandler class from the modules directory
-import OsHandler from './modules/OsHandler.js'; // Import the OsHandler class from the modules directory
-import PathHandler from './modules/PathHandler.js'; // Import the PathHandler class from the modules directory    
-import ProcessHandler from './modules/ProcessHandler.js'; // Import the ProcessHandler class from the modules directory
-import StreamHandler from './modules/StreamHandler.js'; // Import the StreamHandler class from the modules directory
+import {
+    FileHandler,
+    BufferHandler,
+    CryptoHandler,
+    OsHandler,
+    PathHandler,
+    ProcessHandler,
+    StreamHandler
+} from "../index.js";
 
 const fileHandler = new FileHandler('example.txt'); // Create a new instance of the FileHandler class
 const bufferHandler = new BufferHandler(); // Create a new instance of the BufferHandler class

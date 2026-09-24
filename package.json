@@ -1,14 +1,20 @@
 {
-  "name": "nodejs",
+  "name": "@mihajlos07/node-core-handlers",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "Utility handler classes for Node.js core modules",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run test; node server.js"
+    "start": "npm run test; node test/server.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "node",
+    "core-modules",
+    "utilities",
+    "handlers"
+  ],
+  "author": "Mihajlo Stoiljkovic",
   "license": "ISC",
   "type": "module"
 }
